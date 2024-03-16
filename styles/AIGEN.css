@@ -1,0 +1,91 @@
+@font-face {
+    font-family: "Algae";
+    src: url(fonts/AlegreyaSans-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "Algae";
+}
+
+body {
+    background-color: #222831;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 75%;
+    max-width: 600px; /* Added max-width for responsiveness */
+    background-color: #F7DDDE;
+    box-shadow: 10px 10px 5px 10px rgb(197, 0, 76), -10px -10px 5px 10px rgb(81, 148, 224);
+    display: flex;
+    flex-direction: column; /* Adjusted for responsiveness */
+    align-items: center; /* Adjusted for responsiveness */
+    padding: 20px; /* Added padding for better spacing */
+    border-radius: 20px; /* Adjusted for responsiveness */
+}
+
+.image img {
+    max-width: 100%; /* Ensures the image doesn't overflow its container */
+    height: auto; /* Maintains aspect ratio */
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 600;
+    color: rgb(197, 0, 76);
+    margin-top: 20px; /* Added for spacing */
+    text-align: center; /* Adjusted for responsiveness */
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Added for spacing */
+}
+
+.buttons a {
+    text-decoration: none; /* Added for consistency */
+}
+
+.buttons button {
+    height: 50px;
+    width: 100px;
+    margin: 10px;
+    border: none;
+    border-radius: 25px; /* Adjusted for responsiveness */
+    background-color: rgb(81, 148, 224); /* Changed default button color */
+    color: white; /* Changed default button text color */
+    font-size: 16px; /* Adjusted for responsiveness */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: rgb(214, 0, 0); /* Darker color on hover */
+}
+
+@media (max-width: 600px) {
+    .main {
+        width: 90%; /* Adjusted for smaller screens */
+        border-radius: 10px; /* Adjusted for smaller screens */
+    }
+    h1 {
+        font-size: 30px; /* Adjusted for smaller screens */
+    }
+    .buttons button {
+        height: 40px; /* Adjusted for smaller screens */
+        width: 80px; /* Adjusted for smaller screens */
+        border-radius: 20px; /* Adjusted for smaller screens */
+        font-size: 14px; /* Adjusted for smaller screens */
+    }
+}
